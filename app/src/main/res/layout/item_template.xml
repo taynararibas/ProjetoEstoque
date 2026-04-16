@@ -32,6 +32,11 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/btnMaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abrir no Maps"/>
             <!-- Campos futuros aqui -->
         </LinearLayout>
     </LinearLayout>

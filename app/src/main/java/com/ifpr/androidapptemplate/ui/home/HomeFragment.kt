@@ -39,7 +39,8 @@ import java.util.Locale
 import com.ifpr.androidapptemplate.R
 import com.ifpr.androidapptemplate.baseclasses.Item
 import com.ifpr.androidapptemplate.databinding.FragmentHomeBinding
-
+import android.net.Uri
+import android.content.Intent
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -193,8 +194,12 @@ class HomeFragment : Fragment() {
 
                         val imageView = itemView.findViewById<ImageView>(R.id.item_image)
                         val enderecoView = itemView.findViewById<TextView>(R.id.item_endereco)
+                        val btnMaps = itemView.findViewById<Button>(R.id.btnMaps)
 
                         enderecoView.text = "Endereço: ${item.endereco ?: "Não informado"}"
+                        btnMaps.setOnClickListener {
+                            abrirGoogleMaps(item.endereco)
+                        }
 
                         if (!item.imageUrl.isNullOrEmpty()) {
                             Glide.with(container.context).load(item.imageUrl).into(imageView)
@@ -216,4 +221,17 @@ class HomeFragment : Fragment() {
             }
         })
     }
+    private fun abrirGoogleMaps(endereco: String?) {
+        if (endereco.isNullOrEmpty()) {
+            Toast.makeText(requireContext(), "Endereço não disponível", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val uri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" +
+                Uri.encode(endereco))
+
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
+    }
+
 }
