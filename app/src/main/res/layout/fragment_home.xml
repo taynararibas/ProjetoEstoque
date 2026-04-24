@@ -38,6 +38,8 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
+
+
             android:id="@+id/itemContainer"
             android:orientation="vertical"
             android:layout_width="match_parent"
