@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F5F7FA"
+tools:context=".ui.home.DetalhesItemActivity">
+
+
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- IMAGEM -->
+        <ImageView
+            android:id="@+id/imageViewDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <!-- TITULO -->
+        <TextView
+            android:id="@+id/textViewTituloDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terreno disponivel"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 350.000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:paddingStart="16dp"/>
+
+
+    <TextView
+        android:id="@+id/textViewTamanho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tamanho"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#111827"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

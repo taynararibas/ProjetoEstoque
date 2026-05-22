@@ -203,6 +203,17 @@ class HomeFragment : Fragment() {
                         val itemView = LayoutInflater.from(container.context)
                             .inflate(R.layout.item_template, container, false)
 
+                        itemView.setOnClickListener{
+                            val intent = Intent(context, DetalhesItemActivity::class.java)
+                            intent.putExtra("endereco", item.endereco)
+                            intent.putExtra("base64Image", item.base64Image)
+                            intent.putExtra("imageUrl", item.imageUrl)
+                            intent.putExtra("tamanho", item.tamanho)
+                            intent.putExtra("valor", item.valor)
+
+                            startActivity(intent)
+                        }
+
                         val imageView = itemView.findViewById<ImageView>(R.id.item_image)
                         val enderecoView = itemView.findViewById<TextView>(R.id.item_endereco)
                         val btnMaps = itemView.findViewById<Button>(R.id.btnMaps)

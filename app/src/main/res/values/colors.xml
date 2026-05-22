@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#A09C9C</color>
+    <color name="primary">#0F172A</color>
+    <color name="primaryVariant">#1E293B</color>
+    <color name="secondary">#2563EB</color>
+    <color name="background">#F8FAFC</color>
+    <color name="textDark">#111827</color>
 </resources>
